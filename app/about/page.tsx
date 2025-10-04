@@ -33,7 +33,7 @@ export default function AboutPage() {
                 G.B. Equipment Systems Ltd.
               </motion.span>{" "}
               as a leading manufacturer of high quality medical
-              devices adhering to global standards, following the best practices. The GB Group, founded by Late
+              devices adhering to global standards, following the best practices. The GB Group founded by Late {" "}
               <motion.span
                 className="relative inline-block font-semibold text-primary cursor-pointer"
                 transition={{ duration: 0.2 }}>
@@ -138,58 +138,61 @@ export default function AboutPage() {
         </div>
       </section>
       
-      <section className="container py-12">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8 text-center font-mono text-3xl font-bold text-primary md:text-4xl"
-        >
-          Leadership
-        </motion.h2>
+      <section>
+  <motion.h2
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5 }}
+    className="mb-8 text-center font-mono text-3xl font-bold text-primary md:text-4xl"
+  >
+    Leadership
+  </motion.h2>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {/* Vineet Gupta */}
-          <motion.article
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45 }}
-            className="flex flex-col items-center gap-4  p-6 text-center shadow-sm"
-          >
-            <div className="relative h-80 w-80 overflow-hidden rounded-full ring-2 ring-primary/20">
-              <Image src="/vineet.png" alt="Anirudh Gupta portrait" fill className="object-cover" />
-            </div>
-            <div className="space-y-1">
-              <h3 className="text-2xl font-bold text-foreground">Vineet Gupta</h3>
-              <p className="text-sm font-medium text-primary">Director</p>
-              <p className="text-sm text-muted-foreground">
-                Director is ICWA and heads finance department with more than 30 years of experience. Government compliances / Bank dealings are core areas of his strength. He is leading team for diversification into medical device field. A member of the CII Uttarakhand Chapter, Mr Gupta has been awarded with the Udyog Rattan Award to honour his outstanding contribution to the development of the Industry. He is also the chairman of the Blind Judo Association of India.
-              </p>
-            </div>
-          </motion.article>
+  <div className="grid gap-8 md:grid-cols-2 md:gap-6">
+    {/* Vineet Gupta */}
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45 }}
+      className="flex flex-col items-center gap-4 p-6 text-center shadow-sm"
+    >
+      {/* CAMBIO: Se hizo la imagen más pequeña en móvil (h-60 w-60) y más grande en desktop (md:h-80 md:w-80) */}
+      <div className="relative h-60 w-60 overflow-hidden rounded-full ring-2 ring-primary/20 md:h-80 md:w-80">
+        <Image src="/vineet.png" alt="Vineet Gupta portrait" fill className="object-cover" />
+      </div>
+      <div className="space-y-1">
+        <h3 className="text-2xl font-bold text-foreground">Vineet Gupta</h3>
+        <p className="text-sm font-medium text-primary">Director</p>
+        <p className="text-sm text-muted-foreground">
+          Director is ICWA and heads finance department with more than 30 years of experience. Government compliances / Bank dealings are core areas of his strength. He is leading team for diversification into medical device field. A member of the CII Uttarakhand Chapter, Mr Gupta has been awarded with the Udyog Rattan Award to honour his outstanding contribution to the development of the Industry. He is also the chairman of the Blind Judo Association of India.
+        </p>
+      </div>
+    </motion.article>
 
-          {/* Pranav Gupta */}
-          <motion.article
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.45, delay: 0.05 }}
-            className="flex flex-col items-center gap-4  p-6 text-center shadow-sm"
-          >
-            <div className="relative h-80 w-80 overflow-hidden rounded-full ring-2 ring-primary/20">
-              <Image src="/pranav.png" alt="Pranav Gupta portrait" fill className="object-cover" />
-            </div>
-            <div className="space-y-1">
-              <h3 className="text-2xl font-bold text-foreground">Pranav Gupta</h3>
-              <p className="text-sm font-medium text-primary">Director</p>
-              <p className="text-sm text-muted-foreground">
-                The Director of GB is a BMS graduate with a brief experience in corporate law from National Law University, Bombay. The production and expansion activities of GB have come under his purview and area of expertise for the last four years. Being an active member of YI (CII) and a recipient of the International Award for Young People, and he is also a social entrepreneur who is currently heading the NGO, Blind Judo Association of India (BJAI).
-              </p>
-            </div>
-          </motion.article>
-        </div>
-      </section>
+    {/* Pranav Gupta */}
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45, delay: 0.05 }}
+      className="flex flex-col items-center gap-4 p-6 text-center shadow-sm"
+    >
+      {/* CAMBIO: Se hizo la imagen más pequeña en móvil (h-60 w-60) y más grande en desktop (md:h-80 md:w-80) */}
+      <div className="relative h-60 w-60 overflow-hidden rounded-full ring-2 ring-primary/20 md:h-80 md:w-80">
+        <Image src="/pranav.png" alt="Pranav Gupta portrait" fill className="object-cover" />
+      </div>
+      <div className="space-y-1">
+        <h3 className="text-2xl font-bold text-foreground">Pranav Gupta</h3>
+        <p className="text-sm font-medium text-primary">Director</p>
+        <p className="text-sm text-muted-foreground">
+          The Director of GB is a BMS graduate with a brief experience in corporate law from National Law University, Bombay. The production and expansion activities of GB have come under his purview and area of expertise for the last four years. Being an active member of YI (CII) and a recipient of the International Award for Young People, and he is also a social entrepreneur who is currently heading the NGO, Blind Judo Association of India (BJAI).
+        </p>
+      </div>
+    </motion.article>
+  </div>
+</section>
     </div>
   )
 }
