@@ -67,7 +67,7 @@ export default function ContactPage() {
 
       {/* Map Section */}
       <section className="w-full py-20 relative">
-        <div className="mx-auto px-4 md:px-6 lg:px-8">
+        <div className="mx-auto md:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-black text-white mb-4">
               Find Us{" "}
