@@ -441,10 +441,104 @@ export default function HomePage() {
                   height={1000}
                   className="w-full h-auto object-contain hover:brightness-110 transition-all duration-500"
                 />
+
+              
               </motion.div>
+
+                                  
             </div>
           </motion.div>
         </section>
+
+        
+  <section className="container py-8">
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+  >
+    <motion.h3
+      className="mb-4 text-center font-mono text-2xl font-bold text-primary md:text-3xl"
+      whileHover={{ scale: 1.05 }}
+    >
+      CORPORATE DOCUMENTS
+    </motion.h3>
+
+    <motion.div
+      className="mx-auto mb-8 h-1 w-45 bg-primary"
+      initial={{ scaleX: 0 }}
+      whileInView={{ scaleX: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    />
+  </motion.div>
+
+  <div className="mx-auto max-w-3xl space-y-6">
+  {/* Document 1 */}
+    <motion.div
+  initial={{ opacity: 0, x: -30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5 }}
+  whileHover={{ y: -4 }}
+  className="relative overflow-hidden rounded-xl border bg-card p-6 shadow-lg"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 opacity-0 hover:opacity-100 transition-opacity" />
+
+  <div className="relative z-10 flex items-center justify-between">
+    <div>
+      <h4 className="font-semibold text-lg text-foreground">
+        Notice of Annual General Meeting (AGM)
+      </h4>
+      <p className="text-sm text-muted-foreground">
+        Official AGM notice document
+      </p>
+    </div>
+
+    <a
+      href="/documents/notice-of-AGM.pdf"
+      target="_blank"
+      className="text-primary font-semibold"
+    >
+      View PDF →
+    </a>
+  </div>
+</motion.div>
+
+  {/* Document 2 */}
+    <motion.div
+  initial={{ opacity: 0, x: -30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5 }}
+  whileHover={{ y: -4 }}
+  className="relative overflow-hidden rounded-xl border bg-card p-6 shadow-lg"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-primary/10 opacity-0 hover:opacity-100 transition-opacity" />
+
+  <div className="relative z-10 flex items-center justify-between">
+    <div>
+      <h4 className="font-semibold text-lg text-foreground">
+        Annual Return
+      </h4>
+      <p className="text-sm text-muted-foreground">
+        Filed under the Companies Act
+      </p>
+    </div>
+    <a
+      href="/documents/annual-return.pdf"
+      target="_blank"
+      className="text-primary font-semibold "
+    >
+      View PDF →
+    </a>
+  </div>
+</motion.div>
+  </div>
+</section>
+
         <ClientsMarquee />
       </div>
     </>
