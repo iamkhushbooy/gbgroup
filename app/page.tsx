@@ -1,60 +1,60 @@
 "use client"
-import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
-import { useState, useEffect, useRef } from "react"
-import { ClientsMarquee } from "@/components/ClientsMarquee "
-import { HeroCarousel } from "@/components/Hero"
+// import { motion, AnimatePresence } from "framer-motion"
+// import Image from "next/image"
+// import { useState, useEffect, useRef } from "react"
+// import { ClientsMarquee } from "@/components/ClientsMarquee "
+// import { HeroCarousel } from "@/components/Hero"
 
-export default function HomePage() {
-  const textSequence = ["Welcome To GB Group"]
-  const [text, setText] = useState("")
-  const [isDeleting, setIsDeleting] = useState(false)
-  const [loopNum, setLoopNum] = useState(0)
-  const typingSpeed = 150
-  const deletingSpeed = 75
-  const pauseDuration = 2000
-
-
-  const typingTimeout = useRef<NodeJS.Timeout | null>(null)
-
-  useEffect(() => {
-    const handleTyping = () => {
-      const i = loopNum % textSequence.length
-      const fullText = textSequence[i]
-
-      const updatedText = isDeleting
-        ? fullText.substring(0, text.length - 1)
-        : fullText.substring(0, text.length + 1)
-      setText(updatedText)
+// export default function HomePage() {
+//   const textSequence = ["Welcome To GB Group"]
+//   const [text, setText] = useState("")
+//   const [isDeleting, setIsDeleting] = useState(false)
+//   const [loopNum, setLoopNum] = useState(0)
+//   const typingSpeed = 150
+//   const deletingSpeed = 75
+//   const pauseDuration = 2000
 
 
-      if (!isDeleting && updatedText === fullText) {
-        typingTimeout.current = setTimeout(() => {
-          setIsDeleting(true)
-        }, pauseDuration)
+//   const typingTimeout = useRef<NodeJS.Timeout | null>(null)
 
-      } else if (isDeleting && updatedText === "") {
-        setIsDeleting(false)
-        setLoopNum(loopNum + 1)
-      }
-    }
+//   useEffect(() => {
+//     const handleTyping = () => {
+//       const i = loopNum % textSequence.length
+//       const fullText = textSequence[i]
+
+//       const updatedText = isDeleting
+//         ? fullText.substring(0, text.length - 1)
+//         : fullText.substring(0, text.length + 1)
+//       setText(updatedText)
 
 
-    typingTimeout.current = setTimeout(
-      handleTyping,
-      isDeleting ? deletingSpeed : typingSpeed
-    )
+//       if (!isDeleting && updatedText === fullText) {
+//         typingTimeout.current = setTimeout(() => {
+//           setIsDeleting(true)
+//         }, pauseDuration)
 
-    return () => {
-      if (typingTimeout.current) {
-        clearTimeout(typingTimeout.current)
-      }
-    }
-  }, [text, isDeleting, loopNum])
+//       } else if (isDeleting && updatedText === "") {
+//         setIsDeleting(false)
+//         setLoopNum(loopNum + 1)
+//       }
+//     }
 
-  return (
-    <>
-      <HeroCarousel />
+
+//     typingTimeout.current = setTimeout(
+//       handleTyping,
+//       isDeleting ? deletingSpeed : typingSpeed
+//     )
+
+//     return () => {
+//       if (typingTimeout.current) {
+//         clearTimeout(typingTimeout.current)
+//       }
+//     }
+//   }, [text, isDeleting, loopNum])
+
+//   return (
+    // <>
+      {/* <HeroCarousel />
       <div className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center py-12 px-8 ">
         <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10 lg:grid-cols-2 lg:gap-12">
           <motion.div
@@ -165,7 +165,7 @@ export default function HomePage() {
         </section>
 
         {/* CSR section */}
-        <section className="container py-16">
+        {/* <section className="container py-16">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -191,10 +191,10 @@ export default function HomePage() {
                 CORPORATE SOCIAL RESPONSIBILITY
               </motion.h3>
             </div>
-          </motion.div>
+          </motion.div> */}
 
           {/* CSR Content Rows */}
-          <div className="flex flex-col gap-16">
+          {/* <div className="flex flex-col gap-16">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -315,10 +315,10 @@ export default function HomePage() {
               </motion.div>
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* Gallery Section */}
-        <section className="container py-16">
+        {/* <section className="container py-16">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -347,9 +347,9 @@ export default function HomePage() {
             </motion.p>
           </motion.div>
 
-          <div className="grid gap-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"> */}
             {/* Gallery Items */}
-            <motion.div whileHover={{ scale: 1.02 }} className="relative h-[350px] overflow-hidden">
+            {/* <motion.div whileHover={{ scale: 1.02 }} className="relative h-[350px] overflow-hidden">
               <Image src="/gallery/1.png" alt="Tree Plantation" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
               <div className="absolute bottom-0 left-0 right-0 bg-[#2d7a7a]/80 backdrop-blur-sm p-4 transition-colors hover:bg-[#2d7a7a]">
                 <p className="font-semibold text-white text-sm">Mr Pranav Gupta at Uttarakhand pharma and healthcare conclave and samman 2025</p>
@@ -475,9 +475,9 @@ export default function HomePage() {
     />
   </motion.div>
 
-  <div className="mx-auto max-w-3xl space-y-6">
+  <div className="mx-auto max-w-3xl space-y-6"> */}
   {/* Document 1 */}
-    <motion.div
+    {/* <motion.div
   initial={{ opacity: 0, x: -30 }}
   whileInView={{ opacity: 1, x: 0 }}
   viewport={{ once: true }}
@@ -505,10 +505,10 @@ export default function HomePage() {
       View PDF →
     </a>
   </div>
-</motion.div>
+</motion.div> */}
 
   {/* Document 2 */}
-    <motion.div
+    {/* <motion.div
   initial={{ opacity: 0, x: -30 }}
   whileInView={{ opacity: 1, x: 0 }}
   viewport={{ once: true }}
@@ -540,7 +540,32 @@ export default function HomePage() {
 </section>
 
         <ClientsMarquee />
-      </div>
-    </>
+      </div> */}
+
+
+      
+ 
+{/* 
+    </> 
+  )
+} */}
+
+
+
+
+import Image from "next/image"
+
+export default function HomePage() {
+  return (
+    <div className="fixed inset-0 z-[9999] bg-black flex items-start justify-center overflow-auto">
+      <Image
+        src="/maintenance.png"
+        alt="Maintenance"
+        width={1920}
+        height={1080}
+        priority
+        className="w-full h-auto"
+      />
+    </div>
   )
 }
