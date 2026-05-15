@@ -55,7 +55,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main>{children}</main>
+         <main className="fixed inset-0 flex flex-col overflow-hidden">
+      {children}
+    </main>
         </ThemeProvider>
       </body>
     </html>

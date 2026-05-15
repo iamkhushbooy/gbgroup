@@ -552,14 +552,13 @@ import Image from "next/image"
 
 export default function HomePage() {
   return (
-    <div className="fixed inset-0  flex items-start justify-center overflow-auto">
+    <div className="fixed inset-0 flex items-center justify-center overflow-hidden bg-background">
       <Image
         src="/maintenance.png"
         alt="Maintenance"
-        width={1920}
-        height={1080}
+        fill 
         priority
-        className="w-full h-auto"
+        className="object-contain" 
       />
     </div>
   )
